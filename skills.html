@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="Technical skills and project experience of Adhit.">
+  <title>Skills | AdhitWorks</title>
+
+  <link rel="icon" type="image/jpeg" href="./Assets/images/icon.jpg">
+  <link rel="stylesheet" href="./Assets/css/style.css">
+  <script src="./Assets/javascript/script.js" defer></script>
+
+  <style>
+    .skills-page {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .skills-intro {
+      padding-top: 70px;
+      padding-bottom: 45px;
+    }
+
+    .skills-intro h1 {
+      margin: 12px 0;
+    }
+
+    .skills-intro > p:last-child {
+      max-width: 650px;
+      color: var(--muted);
+    }
+
+    .current-project {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border: 1px solid rgba(105, 224, 202, 0.35);
+      border-radius: 9px;
+      background: linear-gradient(110deg, #102638, #101a29);
+    }
+
+    .current-project strong {
+      color: var(--teal);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .skill-card {
+      padding: 23px;
+      background: rgba(16, 26, 41, 0.86);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .skill-card h2 {
+      margin: 0 0 14px;
+      font-size: 19px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tags span {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      color: #c4d0da;
+      font-size: 12px;
+    }
+
+    .skill-tags .confirm {
+      color: var(--muted);
+      border-style: dashed;
+    }
+
+    .applied-section {
+      padding-top: 65px;
+      padding-bottom: 80px;
+    }
+
+    .applied-section > p {
+      max-width: 650px;
+      color: var(--muted);
+    }
+
+    .applied-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .applied-item {
+      padding: 20px 22px;
+      background: rgba(16, 26, 41, 0.86);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .applied-item h3 {
+      margin: 0 0 7px;
+      font-size: 17px;
+    }
+
+    .applied-item p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 650px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-intro {
+        padding-top: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header class="header">
+  <a class="brand" href="index.html#home" aria-label="AdhitWorks home">
+    <img
+      class="brand-logo"
+      src="./Assets/images/logo.jpg"
+      alt="AdhitWorks"
+      width="2048"
+      height="612"
+    >
+  </a>
+
+  <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+    ☰
+  </button>
+
+  <nav class="navigation" aria-label="Main navigation">
+    <a href="index.html#home">Home</a>
+    <a href="about.html">About</a>
+    <a href="project.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="certification.html">Certification</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+</header>
+
+<main class="skills-page">
+  <section class="skills-intro section">
+    <p class="eyebrow">MY TECHNICAL TOOLKIT</p>
+    <h1>Skills &amp; <span class="accent">technologies.</span></h1>
+    <p>
+      My skills come from my MCA and BCA studies and from building academic
+      web projects. The examples below show where I’ve applied these technologies.
+    </p>
+
+    <div class="current-project">
+      <strong>Current MCA project:</strong>
+      Laravel is the framework I’m using for my current project.
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="skills-grid">
+      <article class="skill-card">
+        <h2>Programming languages</h2>
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>PHP</span>
+          <span>JavaScript</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h2>Web technologies</h2>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h2>Frameworks</h2>
+        <div class="skill-tags">
+          <span>Django</span>
+          <span>Laravel</span>
+        </div>
+        <p>Laravel is also used in my current MCA project.</p>
+      </article>
+
+      <article class="skill-card">
+        <h2>Database</h2>
+        <div class="skill-tags">
+          <span>MySQL</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <h2>Developer tools</h2>
+        <div class="skill-tags">
+          <span>Visual Studio Code</span>
+          <span class="confirm">Add Git / GitHub if you’ve used them</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  
+</main>
+
+<footer class="footer">
+  <a class="footer-brand" href="index.html#home">Adhit<span>Works</span></a>
+  <p>Designed and built by Adhit · <span id="year"></span></p>
+  <a href="#">Back to top ↑</a>
+</footer>
+</body>
+</html>
