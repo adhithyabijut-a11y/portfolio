@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080d18">
-  <meta name="description" content="Adhit's academic projects, technical skills, and technologies.">
+  <meta name="description" content="Adhit's projects, technical skills, and technologies.">
   <title>Projects &amp; Skills | AdhitWorks</title>
 
   <link rel="icon" type="image/jpeg" href="./Assets/images/icon.jpg">
@@ -13,13 +13,13 @@
 
   <style>
     .skill-page {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .page-intro {
       padding-top: 65px;
-      padding-bottom: 30px;
+      padding-bottom: 34px;
     }
 
     .page-intro h1 {
@@ -28,32 +28,43 @@
 
     .page-intro > p:last-child,
     .section-description {
-      max-width: 680px;
+      max-width: 720px;
       color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
     }
 
     .project-grid,
     .skill-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      gap: 24px;
     }
 
     .portfolio-project,
     .skill-card {
-      padding: 23px;
-      background: rgba(16, 26, 41, 0.9);
+      padding: 32px;
+      background:
+        linear-gradient(145deg, rgba(19, 39, 57, 0.96), rgba(16, 26, 41, 0.96));
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 18px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16);
     }
 
     .portfolio-project {
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
     }
 
     .portfolio-project:hover {
-      transform: translateY(-4px);
-      border-color: rgba(105, 224, 202, 0.55);
+      transform: translateY(-6px);
+      border-color: rgba(105, 224, 202, 0.65);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.25);
     }
 
     .project-top {
@@ -61,55 +72,60 @@
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
 
     .project-type {
       color: var(--teal);
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 1.4px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     .project-number {
-      color: rgba(105, 224, 202, 0.65);
-      font-size: 24px;
+      color: rgba(105, 224, 202, 0.75);
+      font-size: 30px;
       font-weight: 700;
+      line-height: 1;
     }
 
     .portfolio-project h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
+      margin: 0 0 14px;
+      font-size: clamp(22px, 2.4vw, 27px);
+      line-height: 1.25;
     }
 
     .portfolio-project > p {
-      min-height: 78px;
-      margin: 0 0 18px;
+      flex: 1;
+      margin: 0 0 24px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 16px;
+      line-height: 1.75;
     }
 
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 9px;
     }
 
     .skill-tags span {
-      padding: 6px 10px;
+      padding: 8px 12px;
       border: 1px solid var(--border);
-      border-radius: 5px;
+      border-radius: 7px;
+      background: rgba(8, 13, 24, 0.28);
       color: #c4d0da;
-      font-size: 12px;
+      font-size: 13px;
     }
 
     .project-meta {
-      margin-top: 17px;
-      padding-top: 14px;
+      margin-top: 20px;
+      padding-top: 16px;
       border-top: 1px solid var(--border);
       color: var(--muted);
-      font-size: 13px;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .project-meta strong {
@@ -132,18 +148,42 @@
       font-size: 13px;
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 760px) {
+      .skill-page {
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
       .project-grid,
       .skill-grid {
         grid-template-columns: 1fr;
       }
 
+      .portfolio-project {
+        min-height: 0;
+      }
+
       .page-intro {
         padding-top: 48px;
       }
+    }
+
+    @media (max-width: 480px) {
+      .portfolio-project {
+        padding: 24px;
+        border-radius: 14px;
+      }
+
+      .project-top {
+        margin-bottom: 19px;
+      }
+
+      .portfolio-project h2 {
+        font-size: 22px;
+      }
 
       .portfolio-project > p {
-        min-height: 0;
+        font-size: 15px;
       }
     }
   </style>
@@ -168,30 +208,80 @@
   <nav class="navigation" aria-label="Main navigation">
     <a href="index.html#home">Home</a>
     <a href="about.html">About</a>
-    <a href="project.html">Projects</a>
+    <a href="project.html" aria-current="page">Projects</a>
     <a href="skills.html">Skills</a>
     <a href="certification.html">Certification</a>
-    <a href="contact.html" aria-current="page">Contact</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <main class="skill-page">
-  <!-- Projects come first -->
   <section class="page-intro section">
-    <p class="eyebrow">ACADEMIC WORK</p>
+    <p class="eyebrow">PROJECTS &amp; EXPERIENCE</p>
     <h1>Projects I’ve <span class="accent">built.</span></h1>
     <p>
-      These MCA and BCA projects gave me practical experience developing
-      web-based applications.
+      A collection of academic and personal projects that showcase my work
+      across machine learning, web development, and travel storytelling.
     </p>
   </section>
 
   <section class="section">
     <div class="project-grid">
+
+      <article class="portfolio-project">
+        <div class="project-top">
+          <span class="project-type">Machine Learning Project</span>
+          <span class="project-number">01</span>
+        </div>
+        <h2>Loan Approval Prediction</h2>
+        <p>
+          Built a Flask web app that evaluates applicant details with a trained
+          machine learning model and displays an approval prediction with
+          probability estimates. Compared three classifiers and selected a
+          Random Forest model for deployment.
+        </p>
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>scikit-learn</span>
+          <span>Pandas</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <div class="project-meta">
+          <strong>Model:</strong> Random Forest ·
+          <strong>Test accuracy:</strong> 98.1%
+        </div>
+      </article>
+
+      <article class="portfolio-project">
+        <div class="project-top">
+          <span class="project-type">Front-End Web Project</span>
+          <span class="project-number">02</span>
+        </div>
+        <h2>Travelogue — Stories from Himachal</h2>
+        <p>
+          Created a visual travel journal showcasing Himachal Pradesh through
+          destination highlights, travel notes, and photography. Includes a
+          responsive navigation menu and a demo newsletter form.
+        </p>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Responsive Design</span>
+        </div>
+        <div class="project-meta">
+          <strong>Type:</strong> Static front-end website ·
+          <strong>Focus:</strong> Travel journal and destination guide
+        </div>
+      </article>
+
       <article class="portfolio-project">
         <div class="project-top">
           <span class="project-type">MCA Mini Project</span>
-          <span class="project-number">01</span>
+          <span class="project-number">03</span>
         </div>
         <h2>Virtual Trip and Travel Management</h2>
         <p>
@@ -204,13 +294,15 @@
           <span>Laravel</span>
           <span>MySQL</span>
         </div>
-        <div class="project-meta"><strong>Back end:</strong> MySQL</div>
+        <div class="project-meta">
+          <strong>Back end:</strong> MySQL
+        </div>
       </article>
 
       <article class="portfolio-project">
         <div class="project-top">
           <span class="project-type">BCA Main Project</span>
-          <span class="project-number">02</span>
+          <span class="project-number">04</span>
         </div>
         <h2>Science Lab Management</h2>
         <p>
@@ -225,13 +317,15 @@
           <span>Django</span>
           <span>MySQL</span>
         </div>
-        <div class="project-meta"><strong>Back end:</strong> MySQL</div>
+        <div class="project-meta">
+          <strong>Back end:</strong> MySQL
+        </div>
       </article>
 
       <article class="portfolio-project">
         <div class="project-top">
           <span class="project-type">BCA Mini Project</span>
-          <span class="project-number">03</span>
+          <span class="project-number">05</span>
         </div>
         <h2>Opportunity Link</h2>
         <p>
@@ -245,11 +339,13 @@
           <span>PHP</span>
           <span>MySQL</span>
         </div>
-        <div class="project-meta"><strong>Back end:</strong> MySQL</div>
+        <div class="project-meta">
+          <strong>Back end:</strong> MySQL
+        </div>
       </article>
+
     </div>
   </section>
-
 </main>
 
 <footer class="footer">
